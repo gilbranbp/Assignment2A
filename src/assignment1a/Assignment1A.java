@@ -1,19 +1,20 @@
 package assignment1a;
 import java.util.Scanner;
-
+         
 public class Assignment1A 
 {
-    
+
    public static void main(String[] args) 
     {
         Scanner input = new Scanner(System.in);
+        Plants b = new Plants();
         String username, firstName, lastName, plantType;
+        b.welcome();
         
         System.out.println("Please Enter your username: ");
         username = input.nextLine();
         
         User a = new User(username);
-        Plants b = new Plants();
         
         System.out.println("Please enter your first name: ");
         firstName = input.nextLine();

@@ -1,8 +1,15 @@
 package assignment1a;
 import java.util.Scanner;
 
-
-public class Plants extends User
+abstract class PlantsProgram                                                    //abstract class declared
+{
+    public void welcome()
+    {
+        System.out.println("Welcome to the Seed Buying Program!");
+    }
+    
+}
+class Plants extends PlantsProgram                                                
 {
     Scanner input = new Scanner(System.in);
     
@@ -22,6 +29,12 @@ public class Plants extends User
     public Plants(String username)
     {
         this.username = username;
+    }
+    
+    public void printUsername(String user)                                      //Polymorphism declared by setting up methods with parameters in the sub class
+    {
+        user = username;
+        System.out.println(username);
     }
     
     public void setPlantType(String plantType)
